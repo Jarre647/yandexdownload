@@ -1,1 +1,18 @@
 <a id="YandexStoreSGC_link" href="yastore://details?id=ru.sibgenco.general">yastore СГК</a>
+
+<script type="text/javascript">
+
+function applink(fail){
+    return function(){
+        var clickedAt = +new Date;
+        setTimeout(function(){
+            if (+new Date - clickedAt < 2000){
+                window.location = "https://store.yandex.com/#download";
+            }
+        }, 500);    
+    };
+}
+
+document.getElementById("YandexStoreSGC_link").onclick = applink();
+
+</script>
